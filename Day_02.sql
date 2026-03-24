@@ -1,3 +1,7 @@
+-- ORACLE USERID & password
+	USERID - SATYADB
+	Passw - Satya123
+
 -- 1. DDL (DATA DEFINITION LANGUAGE)
 	1. CREATE
 	2. DROP
@@ -48,3 +52,22 @@ CREATE TABLE STUDENT_DB
 	SNAME VARCHAR(10),
 	SFEE NUMBER(6,2)
 );
+
+=========================================================================
+-- In ORACLE, if you want to CREATE  a table - you need a permission to CREATE a table.
+Enter user-name: system/Satya123
+Last Successful login time: Tue Feb 24 2026 09:05:12 +05:30
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL> GRANT CREATE TABLE TO SATYADB;
+
+Grant succeeded.
+
+SQL> CONN
+Enter user-name: SATYADB
+Enter password:
+Connected.
+=========================================================================
