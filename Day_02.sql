@@ -71,3 +71,14 @@ Enter user-name: SATYADB
 Enter password:
 Connected.
 =========================================================================
+-- To view the Structure of the TABLE :
+-- Syntax
+===========
+DESC <TABLE NAME>;
+
+-- DESC stands for Describe.
+
+Example -  
+DESC STUDENT_DB;
+
+
