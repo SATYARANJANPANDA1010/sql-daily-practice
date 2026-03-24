@@ -24,3 +24,19 @@ CREATE TABLE <TABLE NAME>(
 	...........................
 	
 );
+
+DATATYPES:
+==========
+1. INTEGER DATATYPES
+2. STRING DATATYPES / CHARACTER DATATYPES
+3. DATE DATATYPES
+4. LONG DATATYPES	
+	- In ORACLE  LONG Datatypes has deprecated, largely it is not used.
+	- Instead of LONG DATATYPES, CLOB(CHARACTER LARGE OBJECT) Used.
+4. RAW & LONG RAW DATATYPES
+5. LOB (LARGE OBJECT) DATATYPES
+	CLOB (CHARACTER LARGE OBJECT)
+    BLOB (BINARY LARGE OBJECT)
+	
+===============================================
+
