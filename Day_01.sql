@@ -3,6 +3,8 @@
 -- SQL is not CASE SENSITIVE
 -- SQL Query should ends with ";"
 
+SELECT * FROM emp;
+
 1. DDL (DATA DEFINITION LANGUAGE)
 	1. CREATE
 	2. DROP
@@ -36,4 +38,3 @@
 
 
 
-SELECT * FROM emp;
