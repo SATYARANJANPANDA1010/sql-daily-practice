@@ -39,4 +39,12 @@ DATATYPES:
     BLOB (BINARY LARGE OBJECT)
 	
 ===============================================
+SELECT * FROM TAB;
+-- It contains meta data about table in current user's schema.
 
+CREATE TABLE STUDENT_DB
+(
+	STID INT,
+	SNAME VARCHAR(10),
+	SFEE NUMBER(6,2)
+);
