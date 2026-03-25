@@ -44,14 +44,6 @@ DATATYPES:
 ===============================================
 SELECT * FROM TAB;
 -- It contains meta data about table in current user's schema.
-
-CREATE TABLE STUDENT_DB
-(
-	STID INT,
-	SNAME VARCHAR(10),
-	SFEE NUMBER(6,2)
-);
-
 =========================================================================
 -- In ORACLE, if you want to CREATE  a table - you need a permission to CREATE a table.
 Enter user-name: system/Satya123
@@ -69,6 +61,23 @@ SQL> CONN
 Enter user-name: SATYADB
 Enter password:
 Connected.
+=================================================================================
+CREATE TABLE STUDENT_DB
+(
+	STID INT,
+	SNAME VARCHAR(10),
+	SFEE NUMBER(6,2)
+);
+
+
+SQL> DESC STUDENT_DB;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STID                                               NUMBER(38)
+ SNAME                                              VARCHAR2(10)
+ SFEE                                               NUMBER(6,2)
+
+
 =========================================================================
 -- To view the Structure of the TABLE :
 -- Syntax
