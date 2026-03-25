@@ -95,5 +95,65 @@ TRUNCATE TABLE STUDENT;
 
 -- Grant succeeded.
 
+-- ADJUST PAGE SIZE IN ORACLE SQLPLUS IDE
+SQL> SET PAGESIZE 200;
+SQL> SET LINES 200;
 
+-- 5. DROP
+=================
+-- To DROP/DELETE  a table (ROWS & COLUMNS) from database.
+-- Remove entire database object.
+
+-- SYNTAX
+DROP TABLE <TABLE_NAME>;
+
+-- EXAMPLE:
+DROP TABLE STUDENT;
+
+
+-- NEW FEATURES
+===================
+
+-- RECYCLEBIN
+=================
+- System defined table/pre-defined table.
+- To store the information about DROPPED TABLES FROM DB.
+
+-- To view dropped tables in RECYCLEBIN:
+-- SYNTAX:
+==========
+DESC RECYCLEBIN;
+SELECT OBJECT_NAME,ORIGINAL_NAME FROM RECYCLEBIN;
+
+-- EXAMPLE:
+SQL> DESC RECYCLEBIN;
+ Name                                                                                   Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ OBJECT_NAME                                                                            NOT NULL VARCHAR2(128)
+ ORIGINAL_NAME                                                                           VARCHAR2(128)
+ OPERATION                                                                               VARCHAR2(9)
+ TYPE                                                                                    VARCHAR2(25)
+ TS_NAME                                                                                 VARCHAR2(30)
+ CREATETIME                                                                              VARCHAR2(19)
+ DROPTIME                                                                                VARCHAR2(19)
+ DROPSCN                                                                                 NUMBER
+ PARTITION_NAME                                                                          VARCHAR2(128)
+ CAN_UNDROP                                                                              VARCHAR2(3)
+ CAN_PURGE                                                                               VARCHAR2(3)
+ RELATED                                                                                NOT NULL NUMBER
+ BASE_OBJECT                                                                            NOT NULL NUMBER
+ PURGE_OBJECT                                                                           NOT NULL NUMBER
+ SPACE                                                                                   NUMBER
+
+SQL> SELECT OBJECT_NAME,ORIGINAL_NAME FROM RECYCLEBIN;
+
+OBJECT_NAME
+--------------------------------------------------------------------------------------------------------------------------------
+ORIGINAL_NAME
+--------------------------------------------------------------------------------------------------------------------------------
+BIN$+JYe0CQ0TVugjjFLnB0iUQ==$0
+STUDENT
+
+BIN$9hjiH0g3SOiiYEVo3PkCzw==$0
+STUDENT_DB
 
