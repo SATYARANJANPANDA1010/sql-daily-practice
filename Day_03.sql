@@ -157,3 +157,32 @@ STUDENT
 BIN$9hjiH0g3SOiiYEVo3PkCzw==$0
 STUDENT_DB
 
+-- FLASHBACK
+=================
+- To RE-store the TABLE FROM RECYCLEBIN.
+
+-- SYNTAX
+=========
+FLASHBACK TABLE <TABLE_NAME> TO BEFORE DROP;
+
+-- Example:
+FLASHBACK TABLE STUDENT TO BEFORE DROP;
+
+-- PURGE
+=================
+- To DELETE  a table from RECYCLEBIN Permanently.
+- OR
+- To DELETE a table from Database Permanently.
+
+-- SYNTAX-1:
+-- To DROP a table from RECYCLEBIN Permanently.
+PURGE TABLE <TABLE_NAME>;
+
+-- SYNTAX-2:
+-- To DROP all table from RECYCLEBIN Permanently.
+PURGE RECYCLEBIN;
+
+-- SYNTAX-3:
+-- DROP a table from database permanently.
+DROP TABLE <TABLE_NAME> PURGE;
+
