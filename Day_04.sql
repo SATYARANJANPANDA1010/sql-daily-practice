@@ -65,4 +65,175 @@ VALUES
 (V1,V2,.....),
 (V1,V2,.....);
 ============================================================
-  
+
+-- NOTE:
+-- TO RE-EXECUTE THE LAST EXECUTED SQL QUERY IN SQLPLUS EDITOR
+SQL> /
+
+
+-- Example
+SQL> INSERT INTO STUDENT(STID,SADDRESS)
+  2  VALUES(&STID,&SADDRESS);
+Enter value for stid: 7
+Enter value for saddress: 'BHUBANESWAR'
+old   2: VALUES(&STID,&SADDRESS)
+new   2: VALUES(7,'BHUBANESWAR')
+
+1 row created.
+
+================================================================
+
+2. UPDATE
+=========
+- To UPDATE all rows in a table at a time .
+OR
+- To UPDATE a specific row data in a table by using "WHERE" condition.
+- The SQL UPDATE query is used to modify the existing records in a table.
+
+-- SYNTAX:  
+==========
+UPDATE <TABLE_NAME>
+SET <COLUMN_1> = <VALUE1>,
+<COLUMN_2> = <VALUE2> ,
+...................
+WHERE [<CONDITION>];
+
+-- Example:
+============
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK
+         3 RAJESH
+         4 SAUD                           JAJPUR
+         5 TANMAYA                        DHENKANALA
+         6 TUSHAR                         BHADRAK
+         7                                BHUBANESWAR
+
+7 rows selected.
+
+SQL> UPDATE STUDENT
+  2  SET SFEE = 4500
+  3  WHERE SADDRESS = 'CUTTACK';
+
+2 rows updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH
+         4 SAUD                           JAJPUR
+         5 TANMAYA                        DHENKANALA
+         6 TUSHAR                         BHADRAK
+         7                                BHUBANESWAR
+
+7 rows selected.
+
+SQL> UPDATE STUDENT
+  2  SET SADDRESS = 'BERHAMPUR'
+  3  WHERE STID=3;
+
+1 row updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH                         BERHAMPUR
+         4 SAUD                           JAJPUR
+         5 TANMAYA                        DHENKANALA
+         6 TUSHAR                         BHADRAK
+         7                                BHUBANESWAR
+
+7 rows selected.
+
+SQL> UPDATE STUDENT
+  2  SET STUDENTNAME = 'RAJESH SAHOO'
+  3  WHERE STID = 7;
+
+1 row updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH                         BERHAMPUR
+         4 SAUD                           JAJPUR
+         5 TANMAYA                        DHENKANALA
+         6 TUSHAR                         BHADRAK
+         7 RAJESH SAHOO                   BHUBANESWAR
+
+7 rows selected.
+
+SQL> UPDATE STUDENT
+  2  SET SFEE = 4500;
+
+7 rows updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH                         BERHAMPUR                                                4500
+         4 SAUD                           JAJPUR                                                   4500
+         5 TANMAYA                        DHENKANALA                                               4500
+         6 TUSHAR                         BHADRAK                                                  4500
+         7 RAJESH SAHOO                   BHUBANESWAR                                              4500
+
+7 rows selected.
+
+SQL> INSERT INTO STUDENT(STID)
+  2  VALUES (8);
+
+1 row created.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH                         BERHAMPUR                                                4500
+         4 SAUD                           JAJPUR                                                   4500
+         5 TANMAYA                        DHENKANALA                                               4500
+         6 TUSHAR                         BHADRAK                                                  4500
+         7 RAJESH SAHOO                   BHUBANESWAR                                              4500
+         8
+
+8 rows selected.
+
+
+SQL> UPDATE STUDENT
+  2  SET STUDENTNAME = 'AKASH',
+  3  SADDRESS = 'BERHAMAPUR',
+  4  SFEE = 4500
+  5  WHERE STID = 8;
+
+1 row updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         1 SATYA                          CUTTACK                                                  4500
+         2 RABI                           CUTTACK                                                  4500
+         3 RAJESH                         BERHAMPUR                                                4500
+         4 SAUD                           JAJPUR                                                   4500
+         5 TANMAYA                        DHENKANALA                                               4500
+         6 TUSHAR                         BHADRAK                                                  4500
+         7 RAJESH SAHOO                   BHUBANESWAR                                              4500
+         8 AKASH                          BERHAMAPUR                                               4500
+
+8 rows selected.
+
