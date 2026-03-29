@@ -50,3 +50,28 @@ SQL> DELETE FROM STUDENT
 
 2 rows deleted.
 
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         9 PRIYA                                                                                   6000
+         1 SATYA                          CUTTACK                                                  6000
+         2 RABI                           CUTTACK                                                  6000
+         3 RAJESH                         BERHAMPUR                                                6000
+         4 SAUD                           JAJPUR                                                   6000
+         5 TANMAYA                        DHENKANALA                                               6000
+         6 TUSHAR                         BHADRAK                                                  6000
+         7 RAJESH SAHOO                   BHUBANESWAR                                              6000
+         8 AKASH                          BERHAMAPUR                                               6000
+
+9 rows selected.
+
+-- DELETE ALL ROWS FROM A table
+SQL> DELETE FROM STUDENT;
+
+9 rows deleted.
+
+SQL> SELECT * FROM STUDENT;
+
+no rows selected
+
