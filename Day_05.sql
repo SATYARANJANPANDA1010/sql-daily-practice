@@ -54,8 +54,8 @@ SQL> SELECT * FROM STUDENT;
 9 rows selected.
 
 -- NOTE
-👉 = NULL is wrong / does not work properly in SQL
-👉 IS NULL is the correct way to check for NULL values
+--👉 = NULL is wrong / does not work properly in SQL
+--👉 IS NULL is the correct way to check for NULL values
 
 SQL> UPDATE STUDENT
   2  SET SFEE = 6000
@@ -76,5 +76,53 @@ SQL> SELECT * FROM STUDENT;
          6 TUSHAR                         BHADRAK                                                  5000
          7 RAJESH SAHOO                   BHUBANESWAR                                              4500
          8 AKASH                          BERHAMAPUR                                               4500
+
+9 rows selected.
+
+SQL> UPDATE STUDENT
+  2  SET SFEE = NULL;
+
+9 rows updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         9 PRIYA
+         1 SATYA                          CUTTACK
+         2 RABI                           CUTTACK
+         3 RAJESH                         BERHAMPUR
+         4 SAUD                           JAJPUR
+         5 TANMAYA                        DHENKANALA
+         6 TUSHAR                         BHADRAK
+         7 RAJESH SAHOO                   BHUBANESWAR
+         8 AKASH                          BERHAMAPUR
+
+9 rows selected.
+
+-- NOTE
+--👉 = NULL  - It is used in when you are assigning  
+--👉 IS NULL - It is used when you are compairing with values.
+
+-- Again I am updating SFEE
+
+SQL> UPDATE STUDENT
+  2  SET SFEE = 6000;
+
+9 rows updated.
+
+SQL> SELECT * FROM STUDENT;
+
+      STID STUDENTNAME                    SADDRESS                                                 SFEE
+---------- ------------------------------ -------------------------------------------------- ----------
+         9 PRIYA                                                                                   6000
+         1 SATYA                          CUTTACK                                                  6000
+         2 RABI                           CUTTACK                                                  6000
+         3 RAJESH                         BERHAMPUR                                                6000
+         4 SAUD                           JAJPUR                                                   6000
+         5 TANMAYA                        DHENKANALA                                               6000
+         6 TUSHAR                         BHADRAK                                                  6000
+         7 RAJESH SAHOO                   BHUBANESWAR                                              6000
+         8 AKASH                          BERHAMAPUR                                               6000
 
 9 rows selected.
