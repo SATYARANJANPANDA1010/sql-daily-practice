@@ -145,7 +145,54 @@ SQL> SELECT DISTINCT DEPTNO FROM EMP
 ----------
         10
         20
-        30
 
 
+SQL> SELECT * FROM DEPT;
 
+    DEPTNO DNAME          LOC
+---------- -------------- -------------
+        10 ACCOUNTING     NEW YORK
+        20 RESEARCH       DALLAS
+        30 SALES          CHICAGO
+        40 OPERATIONS     BOSTON
+
+
+-- ALIAS 
+=========
+ -- An ALIAS name is a temporary alternate name given to a COLUMN or a TABLE in a query to make the output more readable or the query shorter.
+ -- It exists only for that query execution.
+ 
+SQL> SELECT DEPTNO AS DEP,
+  2  DNAME AS DN
+  3  FROM DEPT D;
+
+       DEP DN
+---------- --------------
+        10 ACCOUNTING
+        20 RESEARCH
+        30 SALES
+        40 OPERATIONS
+
+SQL> SELECT EMPNO E,
+  2  ENAME EN,
+  3  JOB J
+  4  FROM EMP EM;
+
+         E EN         J
+---------- ---------- ---------
+      7369 SMITH      CLERK
+      7499 ALLEN      SALESMAN
+      7521 WARD       SALESMAN
+      7566 JONES      MANAGER
+      7654 MARTIN     SALESMAN
+      7698 BLAKE      MANAGER
+      7782 CLARK      MANAGER
+      7788 SCOTT      ANALYST
+      7839 KING       PRESIDENT
+      7844 TURNER     SALESMAN
+      7876 ADAMS      CLERK
+      7900 JAMES      CLERK
+      7902 FORD       ANALYST
+      7934 MILLER     CLERK
+
+14 rows selected.
