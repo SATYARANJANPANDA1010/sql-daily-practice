@@ -203,6 +203,31 @@ SQL> SELECT * FROM EMP;
 
 14 rows selected.
 
+===========================================
+CREATE TABLE SALGRADE
+(
+  GRADE NUMBER,
+  LOSAL NUMBER,
+  HISAL NUMBER
+);
+
+INSERT INTO SALGRADE VALUES (1, 700, 1200);
+INSERT INTO SALGRADE VALUES (2, 1201, 1400);
+INSERT INTO SALGRADE VALUES (3, 1401, 2000);
+INSERT INTO SALGRADE VALUES (4, 2001, 3000);
+INSERT INTO SALGRADE VALUES (5, 3001, 9999);
+
+SQL> SELECT * FROM SALGRADE;
+
+     GRADE      LOSAL      HISAL
+---------- ---------- ----------
+         1        700       1200
+         2       1201       1400
+         3       1401       2000
+         4       2001       3000
+         5       3001       9999
+===========================================
+
 -- NOTE: * IS NOTHING BUT LIST OF COLUMNS
 
 
@@ -241,3 +266,5 @@ SQL> SELECT * FROM EMP
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 10 rows selected.
+
+
