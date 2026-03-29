@@ -228,7 +228,7 @@ SQL> SELECT * FROM SALGRADE;
          5       3001       9999
 ===========================================
 
--- NOTE: * IS NOTHING BUT LIST OF COLUMNS
+-- NOTE:' * ' IS NOTHING BUT LIST OF COLUMNS
 
 
 -- Specific Record if you want to Retrieve:
