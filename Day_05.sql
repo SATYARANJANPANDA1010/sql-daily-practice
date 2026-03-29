@@ -102,7 +102,7 @@ SQL> SELECT * FROM STUDENT;
 
 -- NOTE
 --👉 = NULL  - It is used in when you are assigning  
---👉 IS NULL - It is used when you are compairing with values.
+--👉 IS NULL - It is used when you are compairing with TABLE.
 
 -- Again I am updating SFEE
 
@@ -126,3 +126,7 @@ SQL> SELECT * FROM STUDENT;
          8 AKASH                          BERHAMAPUR                                               6000
 
 9 rows selected.
+
+-- NOTE
+-- 1. WHEN YOU COMPAIRING NULLS IN A TABLE, WE SHOULD USE A "IS" OPERATOR
+-- 2. WEHN YOU ASSIGN NULL TO A COLUMN --> "=" OPERATOR
