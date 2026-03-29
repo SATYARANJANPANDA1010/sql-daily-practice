@@ -120,4 +120,32 @@ Mr.MILLER Is Working as a CLERK
 
 14 rows selected.
 
+-- DISTINCT Keyword
+=====================
+-- To remove DUPLICATE values from a column.
+
+-- SYNTAX:
+DISTINCT <COLUMN_NAME>
+
+-- Example:
+SELECT DISTINCT  JOB FROM EMP;
+
+SQL> SELECT DISTINCT DEPTNO FROM EMP;
+
+    DEPTNO
+----------
+        30
+        10
+        20
+
+SQL> SELECT DISTINCT DEPTNO FROM EMP
+  2  ORDER BY DEPTNO;
+
+    DEPTNO
+----------
+        10
+        20
+        30
+
+
 
