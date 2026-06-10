@@ -202,6 +202,26 @@ ORIGINAL_NAME
 --------------------------------------------------------------------------------
 BIN$KagAcNoWRgSAqdLENanFzg==$0
 MARKET
+
+	- FLASHBACK
+		- To restore a table from RECYCLEBIN;
+		SYNTAX:
+			FLASHBACK TABLE <TABLE NAME> TO BEFORE DROP;
+
+	- PURGE
+		- To DELETE a table from RECYCLEBIN Permanently.
+						OR
+		- To delete a table from database permanently.
+		
+		SYNTAX:
+			-- To drop a specific table from RECYCLEBIN permanently.
+			PURGE TABLE <TABLE NAME>;
+			-- To drop all tables from RECYCLEBIN permanently.
+			PURGE  RECYCLEBIN;
+			-- To drop a table from database Permanently
+			DROP <TABLE NAME> PURGE;
+			
+		
 		
 
  
