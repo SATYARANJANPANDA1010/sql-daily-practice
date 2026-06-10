@@ -158,6 +158,51 @@ TRUNCATE:
 	- Not allowed "WHERE" clause condition.
 	SYNTAX:
 		TRUNCATE TABLE <TABLE NAME>;
-	
+
+DROP:
+	- DROP TABLE <TABLE NAME>;
+
+-- NEW FEATURES:
+	- RECYCLEBIN:
+		- System defined TABLE/PRE-DEFINED TABLE.
+		- To store the information about DROPPED TABLES From DB.
+	-- To view dropped tables in RECYCLEBIN
+		- DESC RECYCLEBIN;
+		- SELECT 
+
+-- EXAMPLE:
+	SQL> DROP TABLE MARKET;
+
+Table dropped.
+
+SQL> DESC RECYCLEBIN;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OBJECT_NAME                               NOT NULL VARCHAR2(128)
+ ORIGINAL_NAME                                      VARCHAR2(128)
+ OPERATION                                          VARCHAR2(9)
+ TYPE                                               VARCHAR2(25)
+ TS_NAME                                            VARCHAR2(30)
+ CREATETIME                                         VARCHAR2(19)
+ DROPTIME                                           VARCHAR2(19)
+ DROPSCN                                            NUMBER
+ PARTITION_NAME                                     VARCHAR2(128)
+ CAN_UNDROP                                         VARCHAR2(3)
+ CAN_PURGE                                          VARCHAR2(3)
+ RELATED                                   NOT NULL NUMBER
+ BASE_OBJECT                               NOT NULL NUMBER
+ PURGE_OBJECT                              NOT NULL NUMBER
+ SPACE                                              NUMBER
+
+SQL> SELECT OBJECT_NAME, ORIGINAL_NAME FROM RECYCLEBIN;
+
+OBJECT_NAME
+--------------------------------------------------------------------------------
+ORIGINAL_NAME
+--------------------------------------------------------------------------------
+BIN$KagAcNoWRgSAqdLENanFzg==$0
+MARKET
+		
+
  
 	
