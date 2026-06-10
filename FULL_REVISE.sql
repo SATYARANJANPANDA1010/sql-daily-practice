@@ -119,4 +119,43 @@ SQL> DESC SALGRADE;
  GRADE                                              NUMBER
  LOSAL                                              NUMBER
  HISAL                                              NUMBER
+ 
+ --------------------------------------------------------------------------------
+ ALTER: 
+  - To change/modify the structure a table.
+ ALTER-MODIFY:
+ - To change a datatype from one datatype to another.
+ SYNTAX: 
+	ALTER TABLE <TABLE NAME>
+	MODIFY <COLUMN NAME> <NEW DATATYPE> [NEW SIZE];
+
+ALTER - ADD:
+	- To add a new column to an existing table.
+SYNTAX:
+	ALTER TABLE <TABLE NAME>
+	ADD <NEW COLUMN> <DATATYPE>[SIZE];
+	
+ALTER - RENAME:
+	- To change a column name in a table.
+SYNTAX:
+	ALTER TABLE <TABLE NAME>
+	RENAME COLUMN <OLD COLUMN NAME> TO <NEW COLUMN NAME>;
+ALTER - DROP:
+ - Drop/Delete a column from table.
+	ALTER TABLE <TABLE NAME>
+	DROP COLUMN <COLUMN NAME>
+
+RENAME:
+	- To change a table name.
+	SYNTAX:
+		RENAME <OLD TABLE NAME> TO <NEW TABLE NAME>;
+
+TRUNCATE:
+	- To delete all rows from a table at a time.
+	- TO DELETE rows but not columns.
+	- The data will permanent deletion.
+	- Using TRUNCATE , we can not delete a specific rows from a table.
+	- Not allowed "WHERE" clause condition.
+	
+ 
 	
