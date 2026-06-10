@@ -156,6 +156,8 @@ TRUNCATE:
 	- The data will permanent deletion.
 	- Using TRUNCATE , we can not delete a specific rows from a table.
 	- Not allowed "WHERE" clause condition.
+	SYNTAX:
+		TRUNCATE TABLE <TABLE NAME>;
 	
  
 	
